@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+  a:hover {
+    color: #000;
+    text-decoration: none; }
+
+.outer-header {
+  background-color: #42474e; }
+
+.show-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0; }
+  .show-header .logo {
+    color: #fff; }
+  .show-header > div {
+    display: flex;
+    justify-content: flex-end; }
+  .show-header input {
+    border: 1px solid #e3dcdc;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    padding: 0 10px; }
+    .show-header input::placeholder {
+      font-size: 13px; }
+    .show-header input:focus {
+      outline: none; }
+
+.holder {
+  padding: 30px 0; }
+
+.main-title,
+.single-title {
+  text-align: center;
+  margin: 0;
+  font-weight: 500; }
+
+#shows-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0; }
+
+.inner-show a {
+  display: block; }
+  .inner-show a:hover .show-card {
+    transform: translateY(-10px);
+    transition: transform 0.3s cubic-bezier(0.79, -0.36, 0.37, 1.78); }
+.inner-show .show-card {
+  margin-top: 30px;
+  border: 1px solid #e3dcdc;
+  border-radius: 17px;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out; }
+.inner-show img {
+  width: 100%; }
+  .inner-show img.broken-image {
+    height: 489px; }
+.inner-show p {
+  padding: 10px;
+  margin: 0px;
+  color: #007bff; }
+
+.single-holder {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px; }
+  .single-holder .image-single-holder {
+    padding: 0; }
+    .single-holder .image-single-holder img {
+      width: 100%;
+      border-radius: 17px; }
+  .single-holder .details-title {
+    margin-top: 15px; }
+  @media (max-width: 992px) {
+    .single-holder .data-single-holder {
+      margin-top: 15px; } }
+  .single-holder .additional-data {
+    border-top: 1px solid #e3dcdc;
+    padding-top: 15px;
+    margin-top: 25px; }
+
+.additional-info {
+  display: flex; }
+
+.show-list-episodes ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  padding: 0;
+  list-style-type: none; }
+.show-list-episodes .episode-holder h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px; }
+.show-list-episodes .episode-image img {
+  width: 100%; }
+
+/*# sourceMappingURL=main.css.map */

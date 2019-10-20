@@ -1,0 +1,146 @@
+@import "variables";
+@import "global";
+@import "mixins";
+
+.outer-header {
+  background-color: $header-color;
+}
+
+.show-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+
+  .logo {
+    color: $white-text;
+  }
+
+  > div {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  input {
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    padding: 0 10px;
+
+    &::placeholder {
+      font-size: 13px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.holder {
+  padding: 30px 0;
+}
+
+.main-title,
+.single-title {
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+}
+
+#shows-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.inner-show {
+  a {
+    display: block;
+
+    &:hover {
+      .show-card {
+        transform: translateY(-10px);
+        transition: transform 0.3s cubic-bezier(0.79, -0.36, 0.37, 1.78);
+      }
+    }
+  }
+
+  .show-card {
+    margin-top: 30px;
+    border: 1px solid $border-color;
+    border-radius: 17px;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.2s ease-out;
+  }
+
+  img {
+    width: 100%;
+
+    &.broken-image {
+      height: 489px;
+    }
+  }
+  p {
+    padding: 10px;
+    margin: 0px;
+    color: $show-name;
+  }
+}
+
+.single-holder {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+  .image-single-holder {
+    padding: 0;
+    img {
+      width: 100%;
+      border-radius: 17px;
+    }
+  }
+
+  .details-title {
+    margin-top: 15px;
+  }
+
+  @include tablet {
+    .data-single-holder {
+      margin-top: 15px;
+    }
+  }
+
+  .additional-data {
+    border-top: 1px solid $border-color;
+    padding-top: 15px;
+    margin-top: 25px;
+  }
+}
+
+.additional-info {
+  display: flex;
+}
+
+.show-list-episodes {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .episode-holder h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .episode-image {
+    img {
+      width: 100%;
+    }
+  }
+}
